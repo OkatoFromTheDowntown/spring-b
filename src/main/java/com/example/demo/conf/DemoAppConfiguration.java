@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import org.springframework.web.servlet.resource.ResourceUrlProvider;
 
 /**
- * @author okato
+ * @author okato TODO class
  */
 @Configuration
 public class DemoAppConfiguration extends WebMvcConfigurationSupport {

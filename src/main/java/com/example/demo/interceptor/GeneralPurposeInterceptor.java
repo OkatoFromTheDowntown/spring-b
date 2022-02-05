@@ -23,7 +23,10 @@ public class GeneralPurposeInterceptor implements HandlerInterceptor {
         if (!Arrays.stream(supported).toList().contains(reqPlatformType)) {
             response.setStatus(HttpStatus.NOT_ACCEPTABLE.value());
             response.setContentType("application/json");
-            response.getWriter().write("{" + "\"timestamp\":" + System.currentTimeMillis() + "," + "\"status\":" + HttpStatus.NOT_ACCEPTABLE.value() + "," + "\"error\":\"" + HttpStatus.NOT_ACCEPTABLE.getReasonPhrase() + "\"," + "\"path\":\"" + request.getRequestURI() + "\"}");
+            response.getWriter().write("{" + "\"timestamp\":" + System.currentTimeMillis() + ","
+                    + "\"status\":" + HttpStatus.NOT_ACCEPTABLE.value() + ","
+                    + "\"error\":\"" + HttpStatus.NOT_ACCEPTABLE.getReasonPhrase() + "\","
+                    + "\"path\":\"" + request.getRequestURI() + "\"}");
             return false;
         }
         return true;
