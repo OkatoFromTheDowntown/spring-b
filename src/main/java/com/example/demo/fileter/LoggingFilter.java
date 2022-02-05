@@ -23,5 +23,10 @@ public class LoggingFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         LOG.info("Incoming: {}", req.getRequestURI());
+        // Servlet Filters are an implementation of the [Chain of responsibility] design pattern.
+        // The chain.doFilter() is proceeding to the next element in the chain.
+        // The last element of the chain is the target resource/servlet.
+        // If you do not call it then the next filter (probably defined somewhere in your config.java or web.xml) will not be executed.
+        chain.doFilter(request, response);
     }
 }
