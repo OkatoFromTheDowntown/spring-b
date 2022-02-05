@@ -1,4 +1,4 @@
-package com.example.demo.fileter;
+package com.example.demo.filter;
 
 import com.example.demo.type.Role;
 import org.springframework.http.HttpStatus;

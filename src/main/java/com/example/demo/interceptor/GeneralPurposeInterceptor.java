@@ -1,6 +1,6 @@
 package com.example.demo.interceptor;
 
-import com.example.demo.anno.SupportedPlatform;
+import com.example.demo.annotation.SupportedPlatform;
 import com.example.demo.type.PlatformType;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.http.HttpStatus;

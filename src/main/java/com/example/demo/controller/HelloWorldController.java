@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.anno.Platform;
-import com.example.demo.type.PlatformType;
+import com.example.demo.annotation.Platform;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

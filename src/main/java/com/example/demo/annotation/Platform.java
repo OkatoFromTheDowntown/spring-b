@@ -1,4 +1,4 @@
-package com.example.demo.anno;
+package com.example.demo.annotation;
 
 import com.example.demo.type.PlatformType;
 

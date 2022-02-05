@@ -1,4 +1,4 @@
-package com.example.demo.fileter;
+package com.example.demo.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
