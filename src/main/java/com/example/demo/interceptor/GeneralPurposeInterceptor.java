@@ -19,13 +19,13 @@ public class GeneralPurposeInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         PlatformType[] supported = Objects.requireNonNull(AnnotationUtils.findAnnotation(GeneralPurposeInterceptor.class, SupportedPlatform.class)).value();
-        PlatformType reqPlatformType = PlatformType.descOf(request.getHeader("x-platform"));
+        PlatformType reqPlatformType = PlatformType.descOf(request.getHeader("X-platform"));
         if (!Arrays.stream(supported).toList().contains(reqPlatformType)) {
-            response.setStatus(HttpStatus.NOT_ACCEPTABLE.value());
+            response.setStatus(HttpStatus.UNSUPPORTED_MEDIA_TYPE.value());
             response.setContentType("application/json");
             response.getWriter().write("{" + "\"timestamp\":" + System.currentTimeMillis() + ","
-                    + "\"status\":" + HttpStatus.NOT_ACCEPTABLE.value() + ","
-                    + "\"error\":\"" + HttpStatus.NOT_ACCEPTABLE.getReasonPhrase() + "\","
+                    + "\"status\":" + HttpStatus.UNSUPPORTED_MEDIA_TYPE.value() + ","
+                    + "\"error\":\"" + HttpStatus.UNSUPPORTED_MEDIA_TYPE.getReasonPhrase() + "\","
                     + "\"path\":\"" + request.getRequestURI() + "\"}");
             return false;
         }
