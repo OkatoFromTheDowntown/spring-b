@@ -3,6 +3,7 @@ package com.example.demo.conf;
 import com.example.demo.handler.CustomRequestHandlerMapping;
 import com.example.demo.interceptor.GeneralPurposeInterceptor;
 import com.example.demo.interceptor.SinglePurposeInterceptor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.support.FormattingConversionService;
 import org.springframework.web.accept.ContentNegotiationManager;
@@ -29,9 +30,9 @@ public class DemoAppConfiguration extends WebMvcConfigurationSupport {
 
     @Override
     public RequestMappingHandlerMapping requestMappingHandlerMapping(
-            ContentNegotiationManager contentNegotiationManager,
-            FormattingConversionService conversionService,
-            ResourceUrlProvider resourceUrlProvider) {
+            @Qualifier("mvcContentNegotiationManager") ContentNegotiationManager contentNegotiationManager,
+            @Qualifier("mvcConversionService") FormattingConversionService conversionService,
+            @Qualifier("mvcResourceUrlProvider") ResourceUrlProvider resourceUrlProvider) {
         return super.requestMappingHandlerMapping(contentNegotiationManager, conversionService, resourceUrlProvider);
     }
 }
