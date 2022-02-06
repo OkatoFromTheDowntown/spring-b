@@ -1,5 +1,6 @@
 package com.example.demo.conf;
 
+import com.example.demo.handler.CustomRequestHandlerMapping;
 import com.example.demo.interceptor.GeneralPurposeInterceptor;
 import com.example.demo.interceptor.SinglePurposeInterceptor;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +24,7 @@ public class DemoAppConfiguration extends WebMvcConfigurationSupport {
 
     @Override
     protected RequestMappingHandlerMapping createRequestMappingHandlerMapping() {
-        return super.createRequestMappingHandlerMapping();
+        return new CustomRequestHandlerMapping();
     }
 
     @Override
