@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 
-    @ApiVersion
+    @ApiVersion("v0")
     @GetMapping("/hello")
     public String helloWorld() {
         return "HelloWorld!";
