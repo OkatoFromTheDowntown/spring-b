@@ -1,8 +1,8 @@
-package com.example.demo.conf;
+package com.example.demo.presentation.conf;
 
-import com.example.demo.application.handler.CustomRequestHandlerMapping;
-import com.example.demo.application.interceptor.GeneralPurposeInterceptor;
-import com.example.demo.application.interceptor.SinglePurposeInterceptor;
+import com.example.demo.presentation.handler.CustomRequestHandlerMapping;
+import com.example.demo.presentation.interceptor.GeneralPurposeInterceptor;
+import com.example.demo.presentation.interceptor.SinglePurposeInterceptor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.support.FormattingConversionService;
@@ -17,6 +17,13 @@ import org.springframework.web.servlet.resource.ResourceUrlProvider;
  */
 @Configuration
 public class DemoAppConfiguration extends WebMvcConfigurationSupport {
+
+    /**
+     * Platform Checking Interceptor Register
+     * Single Purpose Logging Interceptor Register
+     *
+     * @param registry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new GeneralPurposeInterceptor()).order(1);
