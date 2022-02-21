@@ -45,7 +45,7 @@ public class HelloWorldController {
     }
 
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<GeneralApplicationExceptionObject> handleUnauthorizedAccessingException(final RuntimeException e) {
+    public ResponseEntity<GeneralApplicationExceptionObject> handleSpecificControllerException(final RuntimeException e) {
         return new ResponseEntity<>(GeneralApplicationExceptionObject.builder()
                 .withTitle("Authorization Denied.")
                 .withDescription(e.getMessage())

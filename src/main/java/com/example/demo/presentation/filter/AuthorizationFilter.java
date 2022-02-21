@@ -18,6 +18,11 @@ import java.io.IOException;
  */
 public class AuthorizationFilter extends OncePerRequestFilter {
 
+    // 1. BaseExceptionController - SpringBoot default exception resolver, redirect request to /error.
+    // 2. @ExceptionHandler - Specific controller exception resolver, effected in controller defined.
+    // 3. @ControllerAdvice/RestControllerAdvice + @ExceptionHandler - Extention of specific controller exception resolver.
+    // 4. SimpleMappingExceptionResolver - ...
+    // 5. HandlerExceptionResolver - ...
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, UnauthorizedAccessingException, IOException {
@@ -30,6 +35,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
         }
     }
 
+    // Didn't work : TODO
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<GeneralApplicationExceptionObject> handleUnauthorizedAccessingException(final RuntimeException e) {
         return new ResponseEntity<>(GeneralApplicationExceptionObject.builder()
