@@ -1,8 +1,8 @@
 package com.example.demo.conf;
 
-import com.example.demo.handler.CustomRequestHandlerMapping;
-import com.example.demo.interceptor.GeneralPurposeInterceptor;
-import com.example.demo.interceptor.SinglePurposeInterceptor;
+import com.example.demo.application.handler.CustomRequestHandlerMapping;
+import com.example.demo.application.interceptor.GeneralPurposeInterceptor;
+import com.example.demo.application.interceptor.SinglePurposeInterceptor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.support.FormattingConversionService;

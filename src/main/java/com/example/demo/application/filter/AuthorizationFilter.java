@@ -1,4 +1,4 @@
-package com.example.demo.filter;
+package com.example.demo.application.filter;
 
 import com.example.demo.type.Role;
 import org.springframework.http.HttpStatus;

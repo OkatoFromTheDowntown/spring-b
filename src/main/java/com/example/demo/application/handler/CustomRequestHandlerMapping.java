@@ -1,4 +1,4 @@
-package com.example.demo.handler;
+package com.example.demo.application.handler;
 
 import com.example.demo.annotation.ApiVersion;
 import com.example.demo.condition.CustomRequestCondition;

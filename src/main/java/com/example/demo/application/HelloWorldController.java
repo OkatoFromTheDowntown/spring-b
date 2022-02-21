@@ -1,7 +1,6 @@
-package com.example.demo.controller;
+package com.example.demo.application;
 
 import com.example.demo.annotation.ApiVersion;
-import com.example.demo.annotation.Platform;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
