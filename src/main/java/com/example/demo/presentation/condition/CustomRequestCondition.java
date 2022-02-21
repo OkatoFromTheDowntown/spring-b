@@ -1,10 +1,12 @@
-package com.example.demo.condition;
+package com.example.demo.presentation.condition;
 
 import org.springframework.web.servlet.mvc.condition.RequestCondition;
 
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * Request Versioning Condition Definitions
+ *
  * @author wengjiadong
  */
 public class CustomRequestCondition implements RequestCondition<CustomRequestCondition> {

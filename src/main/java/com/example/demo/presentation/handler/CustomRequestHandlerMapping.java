@@ -1,7 +1,7 @@
-package com.example.demo.application.handler;
+package com.example.demo.presentation.handler;
 
-import com.example.demo.annotation.ApiVersion;
-import com.example.demo.condition.CustomRequestCondition;
+import com.example.demo.presentation.annotation.ApiVersion;
+import com.example.demo.presentation.condition.CustomRequestCondition;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.web.servlet.mvc.condition.RequestCondition;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;

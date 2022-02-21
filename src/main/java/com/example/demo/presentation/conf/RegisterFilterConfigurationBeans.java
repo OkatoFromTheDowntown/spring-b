@@ -1,6 +1,6 @@
-package com.example.demo.conf;
+package com.example.demo.presentation.conf;
 
-import com.example.demo.application.filter.AuthorizationFilter;
+import com.example.demo.presentation.filter.AuthorizationFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +11,12 @@ import org.springframework.core.Ordered;
  */
 @Configuration
 public class RegisterFilterConfigurationBeans {
+
+    /**
+     * Initialize Role Checking Filter
+     *
+     * @return
+     */
     @Bean
     FilterRegistrationBean<AuthorizationFilter> filterFilterRegistration() {
         final FilterRegistrationBean<AuthorizationFilter> filterRegistrationBean= new FilterRegistrationBean();
