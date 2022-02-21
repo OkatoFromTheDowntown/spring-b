@@ -1,4 +1,4 @@
-package com.example.demo.application.exception;
+package com.example.demo.presentation.exception.dto;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * @author okato
  */
-public class ApplicationException extends Exception {
+public class GeneralApplicationExceptionObject {
 
     public String title;
 
@@ -20,7 +20,7 @@ public class ApplicationException extends Exception {
 
     public String timestamp = ZonedDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss a z Z"));
 
-    public ApplicationException(ApplicationExceptionBuilder builder) {
+    public GeneralApplicationExceptionObject(ApplicationExceptionBuilder builder) {
         this.title = builder.title;
         this.status = builder.status;
         this.description = builder.description;
@@ -43,8 +43,8 @@ public class ApplicationException extends Exception {
 
         private String errCode;
 
-        public ApplicationException build() {
-            return new ApplicationException(this);
+        public GeneralApplicationExceptionObject build() {
+            return new GeneralApplicationExceptionObject(this);
         }
 
         public ApplicationExceptionBuilder withTitle(final String title) {
