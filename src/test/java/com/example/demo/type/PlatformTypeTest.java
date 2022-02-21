@@ -1,5 +1,6 @@
 package com.example.demo.type;
 
+import com.example.demo.presentation.type.PlatformType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
