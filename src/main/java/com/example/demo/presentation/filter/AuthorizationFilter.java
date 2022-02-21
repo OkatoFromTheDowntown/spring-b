@@ -35,7 +35,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
         }
     }
 
-    // Didn't work : TODO
+    // Didn't work cause ExceptionHandler only work in Controller : TODO
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<GeneralApplicationExceptionObject> handleUnauthorizedAccessingException(final RuntimeException e) {
         return new ResponseEntity<>(GeneralApplicationExceptionObject.builder()
