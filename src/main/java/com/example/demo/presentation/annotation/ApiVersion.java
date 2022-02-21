@@ -1,6 +1,5 @@
-package com.example.demo.annotation;
+package com.example.demo.presentation.annotation;
 
-import com.example.demo.type.PlatformType;
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.ElementType;
@@ -8,15 +7,16 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+
 /**
- * @author okato
+ * @author wengjiadong
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
-public @interface SupportedPlatform {
-    @AliasFor("type")
-    PlatformType[] value() default PlatformType.DEFAULT;
-
+public @interface ApiVersion {
     @AliasFor("value")
-    PlatformType[] type() default PlatformType.DEFAULT;
+    String version() default "";
+
+    @AliasFor("version")
+    String value() default "";
 }

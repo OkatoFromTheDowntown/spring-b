@@ -1,6 +1,6 @@
-package com.example.demo.annotation;
+package com.example.demo.presentation.annotation;
 
-import com.example.demo.type.PlatformType;
+import com.example.demo.presentation.type.PlatformType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
