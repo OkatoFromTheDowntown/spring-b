@@ -1,4 +1,4 @@
-package com.example.demo.type;
+package com.example.demo.presentation.type;
 
 import java.util.Arrays;
 
